@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       - image: node:17.8.0
-    working_directory: ~/repo
+    working_directory: ~/
     steps:
       - checkout
 
