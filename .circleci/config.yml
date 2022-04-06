@@ -32,3 +32,4 @@ jobs:
 
       - codecov/upload:
           file: './coverage/clover.xml'
+          token: 2f9ddeb1-ebe3-4f90-b5a6-236bd0ec2ef3
