@@ -8,8 +8,14 @@ Enzyme.configure({
   adapter: new EnzymeAdapter(),
 })
 
+
+const setup = () => shallow(<App />);
+
+const findByText = (wrapper:Enzyme.ShallowWrapper, value: string) => ""
+
+const wrapper = shallow(<App />);
+
 test('renders without error', () => {
-  const wrapper = shallow(<App />);
 
   const appComponent = wrapper.find("[data-test='component-app']");
 
@@ -18,10 +24,16 @@ test('renders without error', () => {
 
 test('renders increment button', () => {
 
+  const buttonComponent = wrapper.find("[data-test='increment-button']");
+
+  expect(buttonComponent.length).toBe(1);
 });
 
 test('renders couter display', () => {
 
+  const componentDisplay = wrapper.find("[data-test='counter-display']");
+
+  expect(componentDisplay.length).toBe(1);
 });
 
 test('counter display starts at 0', () => {
